@@ -23,7 +23,7 @@ input.onButtonPressed(Button.B, function () {
 // value = try
 radio.onReceivedValue(function (name, value) {
     if (flag == 1) {
-        basic.showString("Game Over")
+        basic.showString("Dead")
         radio.sendString("Win:" + winner)
     } else {
         if (name == "id") {
@@ -42,7 +42,7 @@ radio.onReceivedValue(function (name, value) {
                         winner = hunter
                         flag = 1
                     }
-                    radio.sendString("Hunted")
+                    radio.sendString("Dead")
                     basic.showIcon(IconNames.Heart)
                     music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
                 }
